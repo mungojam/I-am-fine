@@ -13,17 +13,13 @@ namespace IAmFine.Web.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult UserPage()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult ManagerPage()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
