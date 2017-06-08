@@ -3,11 +3,32 @@
 }
 <h2>@ViewData["Title"].</h2>
 
-<button id="HelpButton">Help</button>
+<body style="background : grey">
+    <h4 class="user-title">@ViewData["Title"].</h4>
 
-<div>
-    <ul id="ManagerMessages"></ul>
-</div>
+    <div class="row">
+        <br>
+        <button type="button" class="btn col-lg-6 btn-circle btn-text btn-urgent-help" id="UrgentHelp" data-toggle="button" onclick="urgentAlert()" ;>
+            I need urgent help!
+        </button>
+        <button type="button" class="btn col-lg-6 btn-circle btn-text btn-some-help" id="SomeHelp" data-toggle="button" onclick="someAlert(this)" ;>
+            I need some help
+        </button>
+        <button type="button" class="btn col-lg-6 btn-circle btn-text btn-fine" id="Fine" data-toggle="button" onclick="fineAlert(this)" ;>
+            I am fine
+        </button>
+        <svg width="200" height="200">
+            <a target="_blank">
+                <polygon points="300,0 200,50 170,170 100,200 30,170 0,50" />
+            </a>
+        </svg>
+
+        <div>
+            <ul id="ManagerMessages"></ul>
+        </div>
+    </div>
+</body>
+
 
 @section scripts {
     <script>
@@ -21,7 +42,7 @@
             };
             // Start the connection.
             $.connection.hub.start().done(function () {
-                $('#HelpButton').click(function () {
+                $('#UrgentHelp').click(function () {
                     // Call the Send method on the hub.
                     chat.server.help();
                 });
@@ -32,5 +53,19 @@
             var encodedValue = $('<div />').text(value).html();
             return encodedValue;
         }
+        function urgentAlert() {
+
+            var backgroundColor = "red";
+            document.body.style.backgroundColor = backgroundColor;
+        };
+
+        function someAlert() {
+            var backgroundColor = "orange";
+            document.body.style.backgroundColor = backgroundColor;
+        };
+        function fineAlert() {
+            var backgroundColor = "green";
+            document.body.style.backgroundColor = backgroundColor;
+        };
     </script>
 }
