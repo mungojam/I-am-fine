@@ -13,16 +13,6 @@ namespace IAmFine.Web.Controllers
             return View();
         }
 
-        public IActionResult UserPage()
-        {
-            return View();
-        }
-
-        public IActionResult ManagerPage()
-        {
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();
