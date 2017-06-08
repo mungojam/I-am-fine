@@ -260,12 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IAmFine.Data2\IAmFine.Data.csproj">
-      <Project>{92E2F3B8-3820-4CBF-8FB1-B4500987FF39}</Project>
+      <Project>{92e2f3b8-3820-4cbf-8fb1-b4500987ff39}</Project>
       <Name>IAmFine.Data</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
