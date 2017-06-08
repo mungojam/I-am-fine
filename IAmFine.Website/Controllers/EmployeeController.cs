@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IAmFine.Web.Controllers
 {
-    public class UserController : Controller
+    public class EmployeeController : Controller
     {
         // GET: User
         public ActionResult Index()
