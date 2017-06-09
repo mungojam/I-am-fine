@@ -7,15 +7,15 @@
         <button type="button" class="btn square pull-right btn-text btn-urgent-help" id="UrgentHelp" data-toggle="button" onclick="urgentAlert()" ;>
             I need urgent help!
         </button>
-    </div>
-    <div class="clearfix bottom-row">
-        <button type="button" class="btn square-bottom btn-text btn-fine" id="Fine" data-toggle="button" onclick="fineAlert(this)" ;>
-            I am fine
-        </button>
-    </div>
-    <div class="clearfix text-row">
-        <div id="ManagerMessages"></div>
-    </div>
+        </div>
+        <div class="clearfix bottom-row">
+            <button type="button" class="btn square-bottom btn-text btn-fine" id="Fine" data-toggle="button" onclick="fineAlert(this)" ;>
+                I am fine
+            </button>
+        </div>
+        <div class="clearfix text-row ">
+            <div class="text-row-font" id="ManagerMessages"></div>
+        </div>        
 </div>
 
 
@@ -52,7 +52,7 @@
         }
         function urgentAlert() {
 
-            var backgroundColor = "red";
+            var backgroundColor = "#F28976";
             document.body.style.backgroundColor = backgroundColor;
         };
 
@@ -61,7 +61,7 @@
             document.body.style.backgroundColor = backgroundColor;
         };
         function fineAlert() {
-            var backgroundColor = "green";
+            var backgroundColor ="#71CB22";
             document.body.style.backgroundColor = backgroundColor;
         };
     </script>

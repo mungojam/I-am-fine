@@ -33,38 +33,43 @@ textarea {
     height: 100vh;
 }
 .btn-urgent-help {
-    background-color: red;
-    border-color: darkred;
+    background-color:#FF2222;
+    border-style : solid !important;
+    border-width: 10px !important;
+    border-color: #D70814 !important;
 }
 
-    .btn-urgent-help:hover {
-        background-color: darkred;
-        color: white;
-    }
+.btn-urgent-help:hover {
+    background-color: darkred;
+    color: white;
+}
 
 
 .btn-some-help {
-    background-color: orange;
-    color: white;
-    border-color: darkorange;
+    background-color: #FF8A00;
+    border-style: solid !important;
+    border-width: 10px !important;
+    border-color: #FF6E1A !important;
 }
 
-.btn-some-help:hover {
-    background-color: darkorange;
-    color: white;
-}
+    .btn-some-help:hover {
+        background-color: #DC6800;
+        color: white;
+    }
 
 .btn-fine {
-    background-color: green;
-    border-color: darkgreen;
+    background-color: #459911;
+    border-style: solid !important;
+    border-width: 10px !important;
+    border-color: darkgreen !important;
 }
 
 .btn-fine:hover {
-    background-color: darkgreen;
+    background-color: #227622;
 }
 
 .btn-text {
-    color: white;
+    color: white !important;
     font-size: xx-large;
     white-space : normal;
 }
@@ -111,12 +116,19 @@ textarea {
 }
 
 .text-row {
-    background-color:gray;
+    background-color: #D7D7D7;
     height: 7%;
     left: 0;
     right: 0;
     position: absolute;
     bottom: 0;
+}
+
+.text-row-font {
+    margin : 0 10px;
+    font-size :large;
+    display : block;
+    
 }
 
 .btn-circle {
@@ -128,3 +140,30 @@ textarea {
     line-height: 1.428571429;
     border-radius: 1000px;
 }
+
+/*Manager view*/
+
+.manager-title{
+    text-align : center !important;
+    color: cornflowerblue !important;
+}
+
+.userTable {
+    border-collapse: collapse;
+    width: 95vw;
+}
+
+body .userTable {
+    margin : 10px;
+    
+}
+
+.userTable table, .userTable td, .userTable th{
+    border : 1px solid #444;
+}
+.userTable td{
+    padding: 5px;
+
+}
+
+
