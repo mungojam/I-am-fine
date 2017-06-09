@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using IAmFine.Data2;
+using IAmFine.Data;
 using Microsoft.AspNet.SignalR;
 
 namespace IAmFine.WebFull
