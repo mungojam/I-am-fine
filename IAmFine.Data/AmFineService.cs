@@ -16,5 +16,17 @@ namespace IAmFine.Data
         {
             return db.Users.ToList();
         }
+
+        public List<Tuple<User, string>> GetEmployeeStatuses()
+        {
+            //return dummy statuses for now
+            return GetEmployees()
+                                .Select((user, i) => Tuple.Create(user, (i % 2 == 0 ? "Fine" : "Help")))
+                                .ToList();
+
+            
+
+
+        }
     }
 }

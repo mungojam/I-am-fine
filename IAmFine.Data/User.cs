@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace IAmFine.Data
@@ -10,6 +11,8 @@ namespace IAmFine.Data
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public virtual Collection<UserStatus> UserStatuses { get; set; }
 
     }
 }
