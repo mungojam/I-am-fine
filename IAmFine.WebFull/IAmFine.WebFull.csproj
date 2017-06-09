@@ -263,6 +263,10 @@
       <Project>{92e2f3b8-3820-4cbf-8fb1-b4500987ff39}</Project>
       <Name>IAmFine.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NotificationService\NotificationService.csproj">
+      <Project>{177bc5f8-3735-4d6a-95a6-8bf3c5922f2e}</Project>
+      <Name>NotificationService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
