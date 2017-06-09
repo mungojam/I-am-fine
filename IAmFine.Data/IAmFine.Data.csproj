@@ -7,8 +7,8 @@
     <ProjectGuid>{92E2F3B8-3820-4CBF-8FB1-B4500987FF39}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IAmFine.Data2</RootNamespace>
-    <AssemblyName>IAmFine.Data2</AssemblyName>
+    <RootNamespace>IAmFine.Data</RootNamespace>
+    <AssemblyName>IAmFine.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

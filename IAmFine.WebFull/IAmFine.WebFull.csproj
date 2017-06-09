@@ -252,7 +252,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IAmFine.Data2\IAmFine.Data.csproj">
+    <ProjectReference Include="..\IAmFine.Data\IAmFine.Data.csproj">
       <Project>{92e2f3b8-3820-4cbf-8fb1-b4500987ff39}</Project>
       <Name>IAmFine.Data</Name>
     </ProjectReference>
