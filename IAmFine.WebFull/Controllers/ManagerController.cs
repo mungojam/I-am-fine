@@ -15,7 +15,10 @@ namespace IAmFine.Web.Controllers
 
         public ActionResult Employees()
         {
-            var employees = service.GetEmployees();
+            var employees = new EmployeeeViewModel
+            {
+                Employees = service.GetEmployees()
+            };
             return View(employees);
         }
 

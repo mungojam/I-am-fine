@@ -1,14 +1,15 @@
 ﻿@using IAmFine.Data
-@model List<User>
+@model IAmFine.Web.Controllers.EmployeeeViewModel
 
 @{
     ViewBag.Title = "title";
-    Layout = "_Layout";
 }
 
 <h2>title</h2>
 
-@*@foreach (var employee in Model)
-{
-    
-}*@
+<ul>
+    @foreach (var employee in Model.Employees)
+    {
+        <li>@employee.FirstName @employee.LastName</li>
+    }
+</ul>
