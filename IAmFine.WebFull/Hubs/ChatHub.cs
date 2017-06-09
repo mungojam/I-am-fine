@@ -22,7 +22,7 @@ namespace IAmFine.WebFull
         public void urgentHelp()
         {
             Clients.All.urgentHelp();
-            NotificationClass.SendNotification("Urgent Help");
+            NotificationClass.SendNotification("Urgent Help", "Subject Test");
 
         }
 
