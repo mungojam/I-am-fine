@@ -16,9 +16,19 @@ namespace IAmFine.WebFull
 
         private AmFineService Service { get; }
 
-        public void help()
+        public void urgentHelp()
         {
-            Clients.All.help();
+            Clients.All.urgentHelp();
+        }
+
+        public void someHelp()
+        {
+            Clients.All.someHelp();
+        }
+
+        public void noHelp()
+        {
+            Clients.All.noHelp();
         }
 
         public void messageFromManager(string message)
