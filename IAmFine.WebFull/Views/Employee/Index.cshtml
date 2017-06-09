@@ -7,15 +7,15 @@
         <button type="button" class="btn square pull-right btn-text btn-urgent-help" id="UrgentHelp" data-toggle="button" onclick="urgentAlert()" ;>
             I need urgent help!
         </button>
-        </div>
-        <div class="clearfix bottom-row">
-            <button type="button" class="btn square-bottom btn-text btn-fine" id="Fine" data-toggle="button" onclick="fineAlert(this)" ;>
-                I am fine
-            </button>
-        </div>
-        <div class="clearfix text-row">
-            <div id="ManagerMessages"></div>
-        </div>        
+    </div>
+    <div class="clearfix bottom-row">
+        <button type="button" class="btn square-bottom btn-text btn-fine" id="Fine" data-toggle="button" onclick="fineAlert(this)" ;>
+            I am fine
+        </button>
+    </div>
+    <div class="clearfix text-row">
+        <div id="ManagerMessages"></div>
+    </div>
 </div>
 
 
@@ -33,7 +33,15 @@
             $.connection.hub.start().done(function () {
                 $('#UrgentHelp').click(function () {
                     // Call the Send method on the hub.
-                    chat.server.help();
+                    chat.server.urgentHelp();
+                });
+                $('#SomeHelp').click(function () {
+                    // Call the Send method on the hub.
+                    chat.server.someHelp();
+                });
+                $('#Fine').click(function () {
+                    // Call the Send method on the hub.
+                    chat.server.noHelp();
                 });
             });
         });
