@@ -10,6 +10,13 @@ namespace IAmFine.Web.Controllers
             return View();
         }
 
+        public ActionResult Employees()
+        {
+            //var users 
+
+            return View();
+        }
+
         // GET: Manager
         public ActionResult Coming()
         {

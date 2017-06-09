@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using IAmFine.Data;
 using Microsoft.Owin;
 using Owin;
 
