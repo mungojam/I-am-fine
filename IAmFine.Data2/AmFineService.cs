@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IAmFine.Data;
 
-namespace IAmFine.Data2
+namespace IAmFine.Data
 {
     public class AmFineService
     {
