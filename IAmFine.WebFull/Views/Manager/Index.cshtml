@@ -5,7 +5,15 @@
 
 <div>Manager View</div>
 
-<button id="ManagerButton">I'm coming</button>
+<div class="col-xs-12 col-md-6 col-lg-4">
+    <div id="UserMessages"></div>
+    <div class="input-group">
+        <input type="text" class="form-control" id="MessageToEmployee">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id="SendMessage">Send!</button>
+        </span>
+    </div><!-- /input-group -->
+</div><!-- /.col-lg-6 -->
 
 @section scripts {
     <script>
@@ -13,15 +21,23 @@
             // Reference the auto-generated proxy for the hub.
             var chat = $.connection.chatHub;
             // Create a function that the hub can call back to display messages.
-            chat.client.help = function () {
-                // Add the message to the page.
-                alert('I need help');
+            chat.client.urgentHelp = function () {
+                alert('I need help urgently!');
+                $('#UserMessages').html('<strong>I need help urgently!</strong>');
+            };
+            chat.client.someHelp = function () {
+                alert('I need some help.');
+                $('#UserMessages').html('<strong>I need some help.</strong>');
+            };
+            chat.client.noHelp = function () {
+                $('#UserMessages').html('<strong>I am ok and no help is needed.</strong>');
             };
             // Start the connection.
             $.connection.hub.start().done(function () {
-                $('#ManagerButton').click(function () {
+                $('#SendMessage').click(function () {
                     // Call the Send method on the hub.
-                    chat.server.messageFromManager('I\'m coming');
+                    $('#UserMessages').append('Message Sent!');
+                    chat.server.messageFromManager($('#MessageToEmployee').val());
                 });
             });
         });
