@@ -1,13 +1,30 @@
 ﻿@{
-    ViewData["Title"] = "Manager View";
+    ViewData["Title"] = "I'm Fine Managing Board";
 }
-<h2>@ViewData["Title"].</h2>
+<h2 class="manager-title">@ViewData["Title"]</h2>
 
-<div>Manager View</div>
+<h4>Greg's Team:</h4>
+
+
+
+<table class="userTable">
+    <tbody>
+        <tr id="header">
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Status</td>
+            <td>Location</td>
+            <td>Last Status Update (mins ago)</td>
+        </tr>
+    </tbody>
+</table>
 
 <div class="col-xs-12 col-md-6 col-lg-4">
     <div id="UserMessages"></div>
     <div id="ManagerReplies"></div>
+    <div >Messaging: 
+    <span id="selectedUser"></span>
+    </div>
     <div class="input-group">
         <input type="text" class="form-control" id="MessageToEmployee">
         <span class="input-group-btn">
@@ -48,5 +65,71 @@
             var encodedValue = $('<div />').text(value).html();
             return encodedValue;
         }
+
+        //Display 
+        var userArray = [
+            ["John", "Smith", "Fine", "Zone 1", 5],
+            ["Ben", "Wells", "Help", "Zone 2", 6],
+            ["Jane", "Doe", "Urgent", "Zone 3", 3]
+        ];
+
+        var rowColor = "green";
+
+        function generateTable(users) {
+            for (var row = 0; row < users.length; row++) {
+                var $formrow = '<tr id="row_' + row + '">';
+                for (var col = 0; col < users[0].length; col++) {
+                    var data = users[row][col];
+                    $formrow = $formrow + '<td>' + data + '</td>';
+                    
+
+                }
+                
+                $formrow = $formrow + 'onclick = "rowClicked(' + row + ')" </tr>';
+
+                $(".userTable").append($formrow);
+
+                if (users[row][2] == "Urgent") {
+                    rowColor = "#F28976";
+                } else if (users[row][2] == "Help") {
+                    rowColor = "orange";
+                } else {
+                    rowColor = "#71CB22";
+                }
+                
+
+                    element = document.getElementById('row_' + row);
+                    element.style.backgroundColor = rowColor;
+                    //$formrow = $formrow + "style= " + "\"background-color:" + color + "\"";
+                    
+            }
+        };
+
+        function tableClicked(event) {
+            var element = event.target;
+            while (element.parentNode) {
+                var id = element.parentNode.id;
+                if (id && id.substr(0, 4) == "row_") {
+                    rowClicked(id.substr(4));
+                    break;
+                }
+                element = element.parentNode;
+            }
+       
+        }
+
+        generateTable(userArray);
+        var currentSelectedStudent = null;
+        function rowClicked(rowNo) {
+            currentSelectedStudent = rowNo;
+            var selectedUserFirstName = userArray[rowNo][0];
+            var selectedUserLasttName = userArray[rowNo][1];
+            document.getElementById("selectedUser").innerHTML = selectedUserFirstName + " " + selectedUserLasttName;
+        }
+
+        $('.userTable').find('tr').click(function () {
+            rowClicked($(this).index()-1);
+        });
+       
     </script>
 }
