@@ -12,6 +12,9 @@ namespace IAmFine.Data
         private AmFineContext db = new AmFineContext();
 
 
-
+        public List<User> GetEmployees()
+        {
+            return db.Users.ToList();
+        }
     }
 }

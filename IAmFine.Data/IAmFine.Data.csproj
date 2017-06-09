@@ -53,6 +53,7 @@
     <Compile Include="User.cs" />
     <Compile Include="UserDBInitialiser.cs" />
     <Compile Include="AmFineContext.cs" />
+    <Compile Include="UserStatus.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

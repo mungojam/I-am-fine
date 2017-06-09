@@ -10,5 +10,7 @@ namespace IAmFine.Data
         public User Helper { get; set; }
 
         public string Relationship { get; set; }
+
+        public int Priority { get; set; }
     }
 }

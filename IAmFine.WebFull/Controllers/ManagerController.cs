@@ -1,9 +1,12 @@
 using System.Web.Mvc;
+using IAmFine.Data;
 
 namespace IAmFine.Web.Controllers
 {
     public class ManagerController : Controller
     {
+        private AmFineService service = new AmFineService();
+
         // GET: Manager
         public ActionResult Index()
         {
@@ -12,9 +15,8 @@ namespace IAmFine.Web.Controllers
 
         public ActionResult Employees()
         {
-            //var users 
-
-            return View();
+            var employees = service.GetEmployees();
+            return View(employees);
         }
 
         // GET: Manager
