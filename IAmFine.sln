@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAmFine.WebFull", "IAmFine.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAmFine.Data", "IAmFine.Data2\IAmFine.Data.csproj", "{92E2F3B8-3820-4CBF-8FB1-B4500987FF39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "NotificationService\NotificationService.csproj", "{177BC5F8-3735-4D6A-95A6-8BF3C5922F2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAmFine.Notification", "NotificationService\IAmFine.Notification.csproj", "{177BC5F8-3735-4D6A-95A6-8BF3C5922F2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
