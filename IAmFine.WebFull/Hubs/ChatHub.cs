@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using IAmFine.Data;
 using Microsoft.AspNet.SignalR;
-using NotificationService;
+using IAmFine.Notification;
 
 namespace IAmFine.WebFull
 {
@@ -23,7 +23,6 @@ namespace IAmFine.WebFull
         {
             Clients.All.urgentHelp();
             NotificationClass.SendNotification("Urgent Help");
-
         }
 
         public void someHelp()
