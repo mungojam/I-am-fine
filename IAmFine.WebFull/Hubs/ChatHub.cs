@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using IAmFine.Data2;
 using Microsoft.AspNet.SignalR;
 
 namespace IAmFine.WebFull
@@ -11,10 +10,10 @@ namespace IAmFine.WebFull
     {
         public ChatHub()
         {
-            Service = new AmFineService();
+            //Service = new AmFineService();
         }
 
-        private AmFineService Service { get; }
+        //private AmFineService Service { get; }
 
         public void urgentHelp()
         {
