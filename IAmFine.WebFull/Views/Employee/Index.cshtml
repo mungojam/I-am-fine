@@ -33,7 +33,15 @@
             $.connection.hub.start().done(function () {
                 $('#UrgentHelp').click(function () {
                     // Call the Send method on the hub.
-                    chat.server.help();
+                    chat.server.urgentHelp();
+                });
+                $('#SomeHelp').click(function () {
+                    // Call the Send method on the hub.
+                    chat.server.someHelp();
+                });
+                $('#Fine').click(function () {
+                    // Call the Send method on the hub.
+                    chat.server.noHelp();
                 });
             });
         });
