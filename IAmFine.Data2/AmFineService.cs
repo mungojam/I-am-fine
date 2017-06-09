@@ -9,7 +9,7 @@ namespace IAmFine.Data
 {
     public class AmFineService
     {
-        private AmFineContext db = new AmFineContext();
+        private AmFineContext db = null;// new AmFineContext();
 
 
 

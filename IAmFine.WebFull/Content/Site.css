@@ -140,3 +140,30 @@ textarea {
     line-height: 1.428571429;
     border-radius: 1000px;
 }
+
+/*Manager view*/
+
+.manager-title{
+    text-align : center !important;
+    color: cornflowerblue !important;
+}
+
+.userTable {
+    border-collapse: collapse;
+    width: 95vw;
+}
+
+body .userTable {
+    margin : 10px;
+    
+}
+
+.userTable table, .userTable td, .userTable th{
+    border : 1px solid #444;
+}
+.userTable td{
+    padding: 5px;
+
+}
+
+
