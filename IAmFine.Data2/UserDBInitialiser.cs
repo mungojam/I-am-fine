@@ -1,7 +1,7 @@
 ﻿
 using IAmFine.Data;
 
-namespace IAmFine.Data2
+namespace IAmFine.Data
 {
     public class SchoolInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<AmFineContext>
     {
