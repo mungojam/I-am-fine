@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using IAmFine.Data;
 using Microsoft.AspNet.SignalR;
-using NotificationService;
+//using NotificationService;
 
 namespace IAmFine.WebFull
 {
@@ -13,16 +13,16 @@ namespace IAmFine.WebFull
         public ChatHub()
         {
             Service = new AmFineService();
-            NotificationClass = new NotificationService.Notification();
+            //NotificationClass = new NotificationService.Notification();
         }
 
         private AmFineService Service { get; }
-        private NotificationService.Notification NotificationClass { get; }
+        //private NotificationService.Notification NotificationClass { get; }
 
         public void urgentHelp()
         {
             Clients.All.urgentHelp();
-            NotificationClass.SendNotification("Urgent Help");
+            //NotificationClass.SendNotification("Urgent Help");
 
         }
 
