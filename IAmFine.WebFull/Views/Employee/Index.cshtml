@@ -27,7 +27,7 @@
             // Create a function that the hub can call back to display messages.
             chat.client.messageFromManager = function (message) {
                 // Add the message to the page.
-                $('#ManagerMessages').html('<strong>' + message + '</strong>');
+                $('#ManagerMessages').html('<strong>' + htmlEncode(message) + '</strong>');
             };
             // Start the connection.
             $.connection.hub.start().done(function () {
