@@ -40,11 +40,9 @@
             var chat = $.connection.chatHub;
             // Create a function that the hub can call back to display messages.
             chat.client.urgentHelp = function () {
-                alert('I need help urgently!');
                 $('#UserMessages').html('<strong>I need help urgently!</strong>');
             };
             chat.client.someHelp = function () {
-                alert('I need some help.');
                 $('#UserMessages').html('<strong>I need some help.</strong>');
             };
             chat.client.noHelp = function () {
@@ -53,9 +51,13 @@
             // Start the connection.
             $.connection.hub.start().done(function () {
                 $('#SendMessage').click(function () {
+                    var messageToEmployee = $('#MessageToEmployee').val();
+
                     // Call the Send method on the hub.
-                    $('#ManagerReplies').append('<br />' + $('#MessageToEmployee').val());
-                    chat.server.messageFromManager($('#MessageToEmployee').val());
+                    $('#ManagerReplies').append('<br />' + htmlEncode(messageToEmployee));
+
+                    chat.server.messageFromManager(messageToEmployee);
+
                     $('#MessageToEmployee').val('');
                 });
             });
