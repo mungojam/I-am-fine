@@ -1,6 +1,5 @@
 using System.Web.Mvc;
 using IAmFine.Data;
-using IAmFine.WebFull.Models;
 
 namespace IAmFine.Web.Controllers
 {

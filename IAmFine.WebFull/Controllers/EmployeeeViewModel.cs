@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using IAmFine.Data;
 
-namespace IAmFine.WebFull.Models
+namespace IAmFine.Web.Controllers
 {
     public class EmployeeeViewModel {
         public List<User> Employees { get; set; }
