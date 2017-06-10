@@ -1,11 +1,12 @@
 using System.Web.Mvc;
 using IAmFine.Data;
+using IAmFine.WebFull.Models;
 
 namespace IAmFine.Web.Controllers
 {
     public class ManagerController : Controller
     {
-        private AmFineService service = new AmFineService();
+        private AmFineService service = null; //new AmFineService();
 
         // GET: Manager
         public ActionResult Index()
