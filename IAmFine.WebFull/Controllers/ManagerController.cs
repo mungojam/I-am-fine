@@ -6,7 +6,7 @@ namespace IAmFine.Web.Controllers
 {
     public class ManagerController : Controller
     {
-        private AmFineService service = new AmFineService();
+        private AmFineService service = null; //new AmFineService();
 
         // GET: Manager
         public ActionResult Index()
