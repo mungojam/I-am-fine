@@ -21,11 +21,5 @@ namespace IAmFine.Web.Controllers
             };
             return View(employees);
         }
-
-        // GET: Manager
-        public ActionResult Coming()
-        {
-            return View();
-        }
     }
 }

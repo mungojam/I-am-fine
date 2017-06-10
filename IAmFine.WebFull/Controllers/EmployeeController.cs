@@ -9,12 +9,6 @@ namespace IAmFine.Web.Controllers
         {
             return View();
         }
-
-        // GET: User/Create
-        public ActionResult Help()
-        {
-            return View();
-        }
         
     }
 }
